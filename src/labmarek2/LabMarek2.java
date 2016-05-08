@@ -105,7 +105,7 @@ public class LabMarek2 {
             static int temperatura = 15;
             
             static void podwyzTemperature(int stopnie) {
-                temperatura = temperatura = stopnie;
+                temperatura = temperatura + stopnie;
             }
             static void obnizTemperature(int stopnie) {
                 temperatura = temperatura - stopnie;
@@ -114,7 +114,8 @@ public class LabMarek2 {
                 System.out.println("Temperatura: " + temperatura + "ͦC");
             }
             static void resetujTemperature() {
-                System.out.println(temperatura - temperatura);
+                System.out.println("Reset temperatury: " + 
+                        (temperatura-temperatura) + "ͦC");
             }
         }
         
