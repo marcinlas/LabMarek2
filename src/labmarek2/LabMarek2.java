@@ -14,13 +14,26 @@ public class LabMarek2 {
         pies.zmienImie("Azor");
         pies.podajImie();
         
+        
         Pies szarik = new Pies("szarik ");
         szarik.szczekaj();
+        
         
         Kot kot = new Kot();
         kot.mrucz();
         kot.jedz();
+        kot.chodzi();
         
+        KontrolerTemperatury.podajTemperature();
+        KontrolerTemperatury.obnizTemperature(5);
+        
+        //Temperatura: -5
+        KontrolerTemperatury.podajTemperature();
+        KontrolerTemperatury.resetujTemperature();
+        KontrolerTemperatury.podajTemperature();
+        
+        Koń rumak = new Koń();
+        rumak.rżyj();
         
     }
 }
@@ -32,17 +45,23 @@ public class LabMarek2 {
         }   */
         
         class Ssak {
+            String imie;
+            
+            
             void jedz() {
                 System.out.println("je");
             }
-            
+            void chodzi() {
+                System.out.println("zapiernicza");
+            }
+   
         }
         
-     /*   class Ssak1 {
+       class Ssak1 {
              Ssak1() {
-                System.out.println("Dodano ssaka o imieniu Marek 2.0");
+                System.out.println("Marek");
             }
-        }   */
+        }   
         
         class Ssak2 {
             String imie;
@@ -75,8 +94,29 @@ public class LabMarek2 {
             }
         }
 
+        class Koń extends Ssak {
+            void rżyj() {
+                System.out.println("i ha ha...");
+            }
+        }
 
-        
+        class KontrolerTemperatury {
+            
+            static int temperatura = 15;
+            
+            static void podwyzTemperature(int stopnie) {
+                temperatura = temperatura = stopnie;
+            }
+            static void obnizTemperature(int stopnie) {
+                temperatura = temperatura - stopnie;
+            }
+            static void podajTemperature() {
+                System.out.println("Temperatura: " + temperatura + "ͦC");
+            }
+            static void resetujTemperature() {
+                System.out.println(temperatura - temperatura);
+            }
+        }
         
 
         
